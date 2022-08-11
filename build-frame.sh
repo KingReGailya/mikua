@@ -20,7 +20,7 @@ echo "mkdir build-info/build-logs/$1/""$""date" >> build-info/build-list/$1
 echo "sudo rm -r -v build-info/build-repos/*" ">"">" "$PWD/build-info/build-logs/$1/""$""date""/1-rm.log" >> $PWD/build-info/build-list/$1
 echo "git clone $3 build-info/build-repos/$1-git-repo" ">"">" "$PWD/build-info/build-logs/$1/""$""date""/2-clone.log" >> $PWD/build-info/build-list/$1
 echo "docker build -t $2 build-info/build-repos/$1/" ">"">" "$PWD/build-info/build-logs/$1/""$""date""/3-build.log" >> $PWD/build-info/build-list/$1
-echo "docker push $2" ">"">" "$PWD/build-logs/$1/""$""date""/4-push.log" >> $PWD/build-info/build-list/$1
+echo "docker push $2" ">"">" "build-info/build-logs/$1/""$""date""/4-push.log" >> $PWD/build-info/build-list/$1
 echo >> $PWD/build-info/build-list/$1
 echo >> $PWD/build-info/build-list/$1
 echo "####" >> $PWD/build-info/build-list/$1
