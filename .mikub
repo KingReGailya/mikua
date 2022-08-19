@@ -1,0 +1,17 @@
+#!/bin/bash
+
+case $1 in
+        "git"  )
+                ./build-info/build-tools/build-frame.sh $2 $3 $4 $1 ;;
+        
+        "folder" )
+        ;;
+        "make"  )
+                ./make.sh ;;
+        "new"  ) 
+        #makes a new seperate build script 
+        ;;
+
+    
+0
+esac
