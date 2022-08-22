@@ -96,8 +96,8 @@ function cusfol(){
         echo >> ../build-custom/$list/build-list/$name
         echo "mkdir ../build-custom/$list/build-logs/$name" >> ../build-custom/$list/build-list/$name
         echo "mkdir ../build-custom/$list/build-logs/$name/""$""date" >> ../build-custom/$list/build-list/$name
-        echo "sudo rm -r -v ../../build-info/build-repos/$name" ">"">" "../build-custom/$list/build-logs/$name/""$""date""/1-rm.log" >> ../../build-info/build-list/$name
-        echo "sudo cp -r -v $repo ../../build-info/build-repos/$name-folder-copy" ">"">" "../build-custom/$list/build-logs/$name/""$""date""/2-copy.log" >> ../../build-info/build-list/$name
+        echo "sudo rm -r -v ../../build-info/build-repos/$name" ">"">" "../build-custom/$list/build-logs/$name/""$""date""/1-rm.log" >> ../build-custom/$list/build-list/$name
+        echo "sudo cp -r -v $repo ../../build-info/build-repos/$name-folder-copy" ">"">" "../build-custom/$list/build-logs/$name/""$""date""/2-copy.log" >> ../build-custom/$list/build-list/$name
         echo "docker build -t $image ../build-custom/$list/build-repos/$name/" ">"">" "../build-custom/$list/build-logs/$name/""$""date""/3-build.log" >> ../build-custom/$list/build-list/$name
         echo "docker push $image" ">"">" "../build-custom/$list/build-logs/$name/""$""date""/4-push.log" >> ../build-custom/$list/build-list/$name
         echo >> ../build-custom/$list/build-list/$name
@@ -105,24 +105,6 @@ function cusfol(){
         echo "####" >> ../build-custom/$list/build-list/$name
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 case $4 in 
 
@@ -134,5 +116,8 @@ case $4 in
 
         "cusgit" )
         cusgit ;;
+
+        "cusfol" )
+        cusfol ;;
 
 esac

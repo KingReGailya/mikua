@@ -1,0 +1,54 @@
+#!/bin/bash
+
+case $1 in
+
+        "add"  )
+                case $2 in
+                
+                        "list" )
+                                case $3 in 
+
+                                "git"  )
+                                ./build-frame.sh $4 $5 $6 cusgit $7
+                                ;;
+
+                                "folder" )
+                                ./build-frame.sh $4 $5 $6 cusfol $7
+                                ;;
+                                
+                                esac
+                        ;;
+
+                        "folder" )
+                        ./build-frame.sh $3 $4 $5 dir 
+                        ;;
+
+                        "git" )
+                        ./build-frame.sh $3 $4 $5 git
+                        ;;
+                
+                esac
+        ;;
+
+        "make" )
+                case $2 in
+                        $nothing )
+                        ./make.sh
+                        ;;
+
+                        * )
+                        ./make.sh $2
+                        ;; 
+                esac
+        ;;
+
+        "new" )
+                case $2 in 
+
+                "list" )
+                ./newlist.sh $3
+                ;;
+                esac
+        ;;
+
+esac
