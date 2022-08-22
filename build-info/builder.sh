@@ -22,3 +22,11 @@ date=`date +%y-%m-%d`
 date=`date +%y-%m-%d`
 
 
+#!/bin/bash
+
+# WARING MODIFFING THE FILE MAY END UP BRAKING THE PROGRAM 
+# Proceed with caiojsaobncs aiodhnas
+
+date=`date +%y-%m-%d`
+
+
