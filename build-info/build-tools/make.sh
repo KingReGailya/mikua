@@ -18,7 +18,7 @@ function custom(){
 }
 
 
-#not working RN :.(.....
+#working
 
 case $1 in
     
