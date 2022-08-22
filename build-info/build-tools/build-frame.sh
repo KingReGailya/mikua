@@ -11,7 +11,8 @@
 #Agrument 5 tell's it weather to use the default or custom list        
 
 
-function folderb(){   $4
+
+function folderb(){
 
         echo >> ../build-info/build-list/$1
         echo >> ../build-info/build-list/$1
@@ -56,49 +57,26 @@ function gitb(){
 
 function cusgit(){
 
-        echo >> ../build-custom/$5/build-info/build-list/$1       
+        echo >> ../build-custom/$5/build-info/build-list/$1   
         echo >> ../build-custom/$5/build-list/$1
-
         echo "####" >> ../build-custom/$5/build-list/$1
-        
         echo >> ../build-custom/$5/build-list/$1
-        
         echo "#Builds the $1 / $2 image from the $3 repo" >> ../build-custom/$5/build-list/$1
-        
         echo >> ../build-custom/$5/build-list/$1
-        
         echo >> ../build-custom/$5/build-list/$1
-        
         echo "mkdir ../build-custom/$5/build-logs/$1" >> ../build-custom/$5/build-list/$1
-        
         echo "mkdir ../build-custom/$5/build-logs/$1/""$""date" >> ../build-custom/$5/build-list/$1
-        
         echo "sudo rm -r -v ../build-custom/$5/build-repos/*" ">"">" "../build-custom/$5/build-logs/$1/""$""date""/1-rm.log" >> ../build-custom/$5/build-list/$1
-        
         echo "git clone $3 ../build-custom/$5/build-repos/$1-git-repo" ">"">" "../build-custom/$5/build-logs/$1/""$""date""/2-clone.log" >> ../build-custom/$5/build-list/$1
-        
         echo "docker build -t $2 ../build-custom/$5/build-repos/$1/" ">"">" "../build-custom/$5/build-logs/$1/""$""date""/3-build.log" >> ../build-custom/$5/build-list/$1
-        
         echo "docker push $2" ">"">" "../build-custom/$5/build-logs/$1/""$""date""/4-push.log" >> ../build-custom/$5/build-list/$1
-        
         echo >> ../build-custom/$5/build-list/$1
-        
         echo >> ../build-custom/$5/build-list/$1
-        
         echo "####" >> ../build-custom/$5/build-list/$1
-
+        echo $1
 }
 
-function cusfol(){
-
-
-
-
-
-
-
-
-}
+#function cusfol(){}
 
 
 
@@ -125,5 +103,8 @@ case $4 in
 
         "git"  )
         gitb ;;
+
+        "cusgit" )
+        ballsit ;;
 
 esac
