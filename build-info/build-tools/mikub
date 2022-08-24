@@ -53,7 +53,7 @@ case $2 in
                 ;;
                 esac
         ;;
-        "remove" )
+        "delete" )
                 case $3 in
 
                 $nothing ) 
@@ -69,6 +69,19 @@ case $2 in
 
                 esac
         ;;
+
+        "remove" )
+
+                
+
+
+        ;;
+
+
+        "clear" )
+                $loc/cutter.sh $2 $3 $4 $5 $6 $7 $8 $9
+        ;;
+
 
         "show"  )
                 $loc/show.sh $3 $4 $5 $6 $7 $8 $9 

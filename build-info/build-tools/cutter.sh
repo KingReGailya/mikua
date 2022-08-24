@@ -12,6 +12,14 @@ function confirmlist(){
     echo "to only clear the spiffic data type wanted"
     echo "Are you sure you want to delete the list $list y/n ?"
     
+    type=confirmlist
+
+    confirm
+
+}
+
+function confirm(){
+
     read answer
     case $answer in
 
@@ -21,12 +29,11 @@ function confirmlist(){
             exit
         ;;
         *  )
-        confirmlist
+        $type
 
     esac
 
 }
-
 
 
 function customframe(){
@@ -71,9 +78,74 @@ case $1 in
         esac
     ;;
   
+    "clear" )
+        case $2 in
+            
+            "logs" )
 
+                case $3 in
+                
+                    $nothing ) 
+                        rm -r -v ../build-logs/*
+                    ;;
+                   
+                    "list" )
+
+                        case $4 in
+
+                            $nothing )
+                               echo please specffiy list
+                            ;;
+
+            
+
+
+                            * )
+                                rm -r -v ../build-custom/$4/build-logs/*
+                            ;;
+                        esac
+                        
+                    ;;
+
+                esac
+            ;;
+            "list" )
+                case $3 in
+
+                    $nothing )
+                        rm -r -v ../build-list/*
+                    ;;
+
+                    * )
+                        case $4 in
+
+                            $nothing )
+                                    rm -r -v ../build-custom/$3/build-list/*
+                            ;;
+
+                            * )
+
+
+                                case $4 in
+
+                                    "frame" )
+                                        rm -r -v ../build-custom/$3/build-list/$5
+                                    ;;
+                                esac
+                                
+                            ;;
+
+
+                        esac
+                    ;;
+
+                esac
+            ;;
+
+
+        esac
+    ;;
 
 esac
 
 
-echo 
