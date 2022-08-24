@@ -2,63 +2,54 @@
 
 case $1 in
 
-    $nothing )
+    "list" )
 
-            cat ../build-list/*
-                
-        ;;
-        
-    * )
         case $2 in
+
 
             $nothing )
 
-                cat ../build-custom/$1/build-list/*
+                ls ../build-list
+            ;;
+            
 
-                ;;
+            "frame" )
+                cat ../build-list/$3
 
-            "list" )
+            ;;
 
-                case $2 in
+
+            * )
+                case $3 in
 
                     $nothing )
                         
-                        ls ../build-list  
-                      
+                        ls ../build-custom/$2/build-list  
+
                     ;;
 
-                    * )
-                        case $3 in 
+                    "frame" )
 
-                        $nothing )
-                            
-                            ls ../build-custom/$/build-list
-
-                        ;;
-
-
-
-                        
-                        * )
-
-                            cat ../build-custom/$2/build-list/$3
-
-                        ;;
-
-                        esac
+                        cat ../build-custom/$2/build-list/$4
+                    
                     ;;
 
-                esac
-            
+
+                esac 
+               
+
             ;;
-        
-        
-        
-        esac
-        ;;
 
-esac
-            
+
+
+        esac
+
+
+    ;;
+
+
+
+esac          
 
 
 

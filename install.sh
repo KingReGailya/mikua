@@ -9,14 +9,15 @@ loc=`echo $PWD`
 function install(){
 
         sudo rm -r -v /bin/mikub
-        sudo echo "loc=$loc"
-        sudo bash -c echo 'loc='$loc' >> /bin/mikub'
-        sudo echo "#!/bin/bash"
+
         sudo bash -c 'echo "#!/bin/bash" >> /bin/mikub'
-        sudo echo 
+        sudo bash -c 'echo loc='$loc' >> /bin/mikub'
+
+        sudo bash -c 'echo cd '$loc/build-info/build-tools' >> /bin/mikub'
+        
         sudo bash -c 'sudo echo >> /bin/mikub'
-        sudo echo "$PWD/mikub" "$""*"
-        sudo bash -c 'sudo echo "$PWD/build-info/build-tools/mikub" "$""*" >> /bin/mikub'
+        
+        sudo bash -c 'sudo echo "$PWD/build-info/build-tools/mikub" '$loc'/build-info/build-tools "$""*" >> /bin/mikub'
 
         sudo chmod u+x /bin/mikub
         sudo chmod 777 /bin/mikub 

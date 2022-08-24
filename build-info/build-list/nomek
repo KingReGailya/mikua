@@ -1,2 +1,0 @@
-sudo rm -r -v ../../build-info/build-repos/nomek >> ../build-custom/nya/build-logs/nomek/$date/1-rm.log
-sudo cp -r -v repo ../../build-info/build-repos/nomek-folder-copy >> ../build-custom/nya/build-logs/nomek/$date/2-copy.log

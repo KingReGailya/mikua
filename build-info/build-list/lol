@@ -1,0 +1,16 @@
+
+
+####
+
+#Builds the lol / image image from Directory repo 
+
+
+mkdir ../../build-info/build-logs/lol
+mkdir ../../build-info/build-logs/lol/$date
+sudo rm -r -v ../../build-info/build-repos/lol >> ../../build-info/build-logs/lol/$date/1-rm.log
+sudo cp -r -v repo ../../build-info/build-repos/lol-folder-copy >> ../../build-info/build-logs/lol/$date/2-copy.log
+docker build -t image ../../build-info/build-repos/lol/ >> ../../build-info/build-logs/lol/$date/3-build.log
+docker push image >> ../../build-info/build-logs/lol/$date/4-push.log
+
+
+####
