@@ -18,6 +18,26 @@ function confirmlist(){
 
 }
 
+function confirmframe(){
+
+    type=confirmframe
+
+
+
+}
+
+
+function confirmbasic(){
+    
+    type=confirmbasic
+    echo "Are you sure you want to Proceed Y / N ?"
+    confirm
+
+}
+
+
+
+
 function confirm(){
 
     read answer
@@ -30,7 +50,7 @@ function confirm(){
         ;;
         *  )
         $type
-
+        ;;
     esac
 
 }
@@ -65,7 +85,10 @@ case $1 in
 
             $nothing )
 
-                echo "can not remove default list"
+                confirmbasic
+                rm -r -v ../build-logs/*
+                rm -r -v ../build-repos/*
+                rm -r -v ../build-list/*
 
             ;;
             
@@ -85,8 +108,30 @@ case $1 in
 
                 case $3 in
                 
+                    "frame" )
+                        case $5 in
+
+                            "date" )
+                            confirmbasic
+                            rm -r -v ../build-logs/$4/$6
+                            ;;
+
+                        esac
+
+                    ;;
+
+                    * ) 
+
+                        confirmbasic
+                        rm -r -v ../build-custom/$4/build-logs/*
+
+                    ;;
+
                     $nothing ) 
+
+                        confirmbasic
                         rm -r -v ../build-logs/*
+                        
                     ;;
                    
                     "list" )
@@ -94,14 +139,31 @@ case $1 in
                         case $4 in
 
                             $nothing )
-                               echo please specffiy list
+                               confirmbasic 
+                               rm -r -v ../build-list/*
+                               
                             ;;
 
-            
-
-
                             * )
-                                rm -r -v ../build-custom/$4/build-logs/*
+
+                                case $5 in
+                                
+                                    "frame" )
+                                        case $7 in
+
+                                            "date" )
+                                            confirmbasic
+                                            rm -r -v ../build-custom/$4/build-logs/$6/$8
+                                            ;;
+                                        esac
+                                    ;;
+                                    * ) 
+                                        confirmbasic
+                                        rm -r -v ../build-custom/$4/build-logs/*
+                                    ;;
+
+                                esac
+
                             ;;
                         esac
                         
@@ -109,28 +171,34 @@ case $1 in
 
                 esac
             ;;
+
             "list" )
+
                 case $3 in
 
                     $nothing )
-                        rm -r -v ../build-list/*
+
+                        rm -r -v ../build-list/* 
+
                     ;;
 
                     * )
                         case $4 in
 
                             $nothing )
+
                                     rm -r -v ../build-custom/$3/build-list/*
+
                             ;;
 
                             * )
-
 
                                 case $4 in
 
                                     "frame" )
                                         rm -r -v ../build-custom/$3/build-list/$5
                                     ;;
+                        
                                 esac
                                 
                             ;;
@@ -142,10 +210,55 @@ case $1 in
                 esac
             ;;
 
+            "repo" )
+                
+                case $3 in 
+                    
+                    $nothing )
+                                                
+                    ;;
+
+                    "list" )
+                        
+                        case $5 in 
+
+                            "frame" )
+
+                                confirmbasic
+                                rm -r -v ../build-custom/$4/build-repo/$6
+                                
+                            ;;
+
+                        esac
+                    
+                    ;;
+
+
+                esac
+            ;;
+
+
+
 
         esac
     ;;
 
+    "Miku" )
+        echo "Do you really want to delete me?"
+        confirmbasic
+        rm -r -v $0/*
+    ;;
+    "all" )
+        echo "WARING THIS WILL DELETE ALL THE DATA OF ALL LISTS INCULDING THE DEFAULT"
+        confirmbasic echo "delete all"
+        rm -r -v ../build-custom/*
+        rm -r -v ../build-list/*
+        rm -r -v ../build-logs/*
+        rm -r -v ../build-repos/*
+        echo
+        echo "All lists removed"
+        echo
+    ;;
 esac
 
 

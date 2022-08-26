@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-echo "Warning this add a file to the /bin directoy do you want to continue y / n ?"
+echo "Warning this progam comes with no warrenty to any amount y / n ?"
 
 loc=`echo $PWD`
 

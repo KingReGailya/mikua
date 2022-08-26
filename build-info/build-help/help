@@ -1,0 +1,9 @@
+
+Show        Show's informations about lists and frames
+Add         Add's new frame to list 
+Make        Makes build script from list 
+New         Makes a new list
+Delete      Deletes all the content of a list
+Clear       Clears a list of frames
+Help        Shows useful info and commmads for MikuB
+

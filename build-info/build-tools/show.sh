@@ -2,6 +2,13 @@
 
 case $1 in
 
+    "lists" )
+                ls ../build-custom
+                echo "default (leave blank for default list)"
+            ;;
+
+
+
     "list" )
 
         case $2 in

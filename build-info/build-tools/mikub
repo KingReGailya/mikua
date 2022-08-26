@@ -9,81 +9,133 @@ case $2 in
                 case $3 in
                 
                         "list" )
-                                case $4 in 
+                
+                                case $5 in 
 
                                 "git"  )
-                                $loc/build-frame.sh $5 $6 $7 cusgit $8
+                        
+                                        $loc/build-frame.sh $6 $7 $8 cusgit $4
+                        
                                 ;;
 
                                 "folder" )
-                                $loc/build-frame.sh $5 $6 $7 cusfol $8
+                        
+                                        $loc/build-frame.sh $6 $5 $8 cusfol $4
+                        
                                 ;;
                                 
                                 esac
+                
                         ;;
 
                         "folder" )
-                        $loc/build-frame.sh $4 $5 $6 dir 
+        
+                                $loc/build-frame.sh $4 $5 $6 dir 
+        
                         ;;
 
                         "git" )
-                        $loc/build-frame.sh $4 $5 $6 git
+
+                                $loc/build-frame.sh $4 $5 $6 git
+
                         ;;
                 
                 esac
+
         ;;
 
         "make" )
+
                 case $3 in
+
                         $nothing )
-                        $loc/make.sh
+                        
+                                $loc/make.sh
+
                         ;;
 
                         * )
-                        $loc/make.sh $3
+
+                                $loc/make.sh $3
+
                         ;; 
+
                 esac
+
         ;;
 
         "new" )
                 case $3 in 
 
-                "list" )
-                $loc/newlist.sh $4
-                ;;
+                        "list" )
+                        
+                                $loc/newlist.sh $4
+                
+                        ;;
+
                 esac
         ;;
+
         "delete" )
+
                 case $3 in
 
                 $nothing ) 
-                echo 
+        
+                        echo 
+                
                 ;;
                 
                 * )
                         
-                $loc/cutter.sh $3 $4
-
+                        $loc/cutter.sh $3 $4
         
                 ;;
 
                 esac
+        
         ;;
-
-        "remove" )
-
-                
-
-
-        ;;
-
 
         "clear" )
+                
                 $loc/cutter.sh $2 $3 $4 $5 $6 $7 $8 $9
+      
         ;;
-
 
         "show"  )
+     
                 $loc/show.sh $3 $4 $5 $6 $7 $8 $9 
+     
         ;;
+
+        "help" )
+     
+                cat ../build-help/help
+     
+        ;;
+
+        "run" )
+                case $3 in
+                        
+                        $nothing )
+     
+                                ../../builder.sh
+     
+                        ;;
+                        
+                        * )
+                                
+                                ../build-custom/$3/$3-builder.sh
+                                
+                        ;;
+
+                esac
+        ;;
+
+        "install" )
+
+                ../../install.sh
+
+        ;;
+
 esac
