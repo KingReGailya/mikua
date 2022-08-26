@@ -3,30 +3,30 @@
 case $1 in
 
     "lists" )
+
                 ls ../build-custom
                 echo "default (leave blank for default list)"
+
             ;;
-
-
 
     "list" )
 
         case $2 in
 
-
             $nothing )
 
                 ls ../build-list
+            
             ;;
             
-
             "frame" )
+
                 cat ../build-list/$3
 
             ;;
 
-
             * )
+
                 case $3 in
 
                     $nothing )
@@ -41,24 +41,12 @@ case $1 in
                     
                     ;;
 
-
                 esac 
                
-
             ;;
-
-
 
         esac
 
-
     ;;
 
-
-
 esac          
-
-
-
-
-

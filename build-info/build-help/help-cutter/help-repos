@@ -1,0 +1,21 @@
+This will wipe the content of any list / frames local repo
+note that it will not wipe the content of a repo stored in a local directory
+it only deletes MikuB local copy of the repo stored in the path 
+
+build-custom/LIST-NAME/build-repos/FRAME-NAME
+
+If you want to clear the repos the default list run 
+
+mikub clear repos
+
+For a spiffic frame run
+
+mikub clear repos frame FRAME-NAME 
+
+This it true for a custom list as well run
+
+mikub clear repos list LIST-NAME frame FRAME-NAME
+
+
+
+

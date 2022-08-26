@@ -1,0 +1,16 @@
+
+
+####
+
+#Builds the image / name image from the repo repo
+
+
+mkdir ../../build-info/build-logs/image
+mkdir ../../build-info/build-logs/image/$date
+sudo rm -r -v ../../build-info/build-repos/image >> ../../build-info/build-logs/image/$date/1-rm.log
+git clone repo ../../build-info/build-repos/image >> ../../build-info/build-logs/image/$date/2-clone.log
+docker build -t name ../../build-info/build-repos/image/ >> ../../build-info/build-logs/image/$date/3-build.log
+docker push name >> ../../build-info/build-logs/image/$date/4-push.log
+
+
+####

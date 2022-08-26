@@ -1,4 +1,5 @@
 build-info/build-custom/*
 build-info/build-logs/*
 build-info/build-lists/*
+build-info/*.tar
 builder.sh

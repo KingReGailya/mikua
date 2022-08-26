@@ -24,11 +24,15 @@ function custom(){
 case $1 in
 
     $nothing )
-    default
+    
+        default
+    
     ;;
     
     *  )
-    custom
+    
+        custom
+    
     ;;
 
 esac
