@@ -6,4 +6,6 @@ New         Makes a new list
 Delete      Deletes all the content of a list
 Clear       Clears a list of frames
 Help        Shows useful info and commmads for MikuB
+Run         Runs a seleted list
+Data        Import or export config list and config data
 

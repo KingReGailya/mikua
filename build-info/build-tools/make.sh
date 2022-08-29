@@ -23,6 +23,13 @@ function custom(){
 
 case $1 in
 
+    "help" )
+
+        cat ../build-help/help-make
+    
+    ;;
+
+
     $nothing )
     
         default

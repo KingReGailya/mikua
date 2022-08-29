@@ -2,6 +2,13 @@
 
 case $1 in
 
+    "help" )
+
+        cat ../build-help/help-show/help
+    
+    ;;
+
+
     "lists" )
 
                 ls ../build-custom

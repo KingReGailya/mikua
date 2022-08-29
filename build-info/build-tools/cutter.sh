@@ -47,30 +47,35 @@ function confirmbasic(){
 
 case $1 in
 
-    "list" )
-
-        case $2 in
-
-            $nothing )
-
-                confirmbasic
-                rm -r -v ../build-logs/*
-                rm -r -v ../build-repos/*
-                rm -r -v ../build-list/*
-
-            ;;
-            
-            * )
-                            
-                confirmbasic
-                rm -r -v ../build-custom/$2
-
-            ;;
-
-        esac
-
+   "help" )
+        cat ../build-help/help-cutter/delete/delete-help
     ;;
-  
+
+   "list" )
+
+       case $2 in
+
+           $nothing )
+
+               
+               confirmbasic
+               rm -r -v ../build-logs/*
+               rm -r -v ../build-repos/*
+               rm -r -v ../build-list/*
+
+           ;;
+           
+           * )
+                           
+               confirmbasic
+               rm -r -v ../build-custom/$2
+
+           ;;
+
+       esac
+
+   ;;
+
     "clear" )
         
         case $2 in
@@ -194,6 +199,12 @@ case $1 in
 
                 case $3 in
 
+                    "help" )
+                        
+                        cat ../build-help/help-cutter/help-list
+                    
+                    ;;
+
                     $nothing )
 
                         confirmbasic
@@ -236,9 +247,27 @@ case $1 in
                 
                 case $3 in 
                     
-                    $nothing )
-                                                
+                    "help" )
+
+                        cat ../build-help/help-cutter/help-repos
+                   
                     ;;
+
+                    $nothing )
+                        
+                        confirmbasic
+                        rm -r -v ../build-repos/*     
+                    
+                    ;;
+
+                    "frame" )
+                        
+                        confirmbasic
+                        rm -r -v ../build-repos/$4/*
+                    
+                    ;;
+
+
 
                     "list" )
                         

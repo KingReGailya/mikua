@@ -35,13 +35,13 @@ case $2 in
     ;;
 
     "import" )
-        
-        tar xzf $name -C $loc/..
-        cp -r -v ../export/build-custom/* ../build-custom/*
-        cp -r -v ../export/build-default/build-list/* ../build-list/*
-        cp -r -v ../export/build-default/build-logs/* ../build-logs/*
-        cp -r -v ../export/build-default/build-repos/* ../build-repos/*
-        rm -r -v ../export
+    
+      tar xzf $3 -C $1/..
+      cp -r -v $1/../export/build-custom/* ../build-custom
+      cp -r -v $1/../export/build-default/build-list ../build-list
+      cp -r -v $1/../export/build-default/build-logs ../build-logs
+      cp -r -v $1/../export/build-default/build-repos ../build-repos
+      rm -r -v ../export
 
     ;;
     
