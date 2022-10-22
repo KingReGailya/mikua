@@ -7,6 +7,10 @@ case $2 in
         "add"  )
                 case $3 in
                 
+                        "help" )
+                                cat ../build-help/help-add
+                        ;;
+
                         "list" )
                 
                                 case $5 in 
