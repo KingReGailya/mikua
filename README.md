@@ -2,7 +2,13 @@
 Miku build is a program written with bash-script to make it easyer 
 to mass build differnt images on a schedule using cron 
 
-in order to install it first clone the git repo and then run the install script
+In order to install it first clone the git repo with
+
+    $git clone https://github.com/KingReGailya/miku-build.git
+
+Then run the install script
+
+    $./install.sh
 
 Running 
 
