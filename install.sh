@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-echo "Warning this progam comes with no warrenty to any amount y / n ?"
+echo "Warning this program comes with no warrenty to any extent y / n ?"
 
 loc=`echo $PWD`
 
