@@ -8,19 +8,19 @@ loc=`echo $PWD`
 
 function install(){
 
-        sudo rm -r -v /bin/mikub
+        sudo rm -r -v /bin/mikua
 
-        sudo bash -c 'echo "#!/bin/bash" >> /bin/mikub'
-        sudo bash -c 'echo loc='$loc' >> /bin/mikub'
+        sudo bash -c 'echo "#!/bin/bash" >> /bin/mikua'
+        sudo bash -c 'echo loc='$loc' >> /bin/mikua'
 
-        sudo bash -c 'echo cd '$loc/build-info/build-tools' >> /bin/mikub'
+        sudo bash -c 'echo cd '$loc/build-info/build-tools' >> /bin/mikua'
         
-        sudo bash -c 'sudo echo >> /bin/mikub'
+        sudo bash -c 'sudo echo >> /bin/mikua'
         
-        sudo bash -c 'sudo echo "$PWD/build-info/build-tools/mikub" '$loc'/build-info/build-tools "$""*" >> /bin/mikub'
+        sudo bash -c 'sudo echo "$PWD/build-info/build-tools/mikua" '$loc'/build-info/build-tools "$""*" >> /bin/mikua'
 
-        sudo chmod u+x /bin/mikub
-        sudo chmod 777 /bin/mikub 
+        sudo chmod u+x /bin/mikua
+        sudo chmod 777 /bin/mikua 
 
 
 

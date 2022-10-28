@@ -19,52 +19,6 @@ image=$2
 
 name=$1
 
-
-function folderb(){
-
-        echo >> ../../build-info/build-list/$name
-        echo >> ../../build-info/build-list/$name
-        echo "####" >> ../../build-info/build-list/$name
-        echo >> ../../build-info/build-list/$name
-        echo "#Builds the $name / $image image from Directory $repo " >> ../../build-info/build-list/$name
-        echo >> ../../build-info/build-list/$name
-        echo >> ../../build-info/build-list/$name
-        echo "mkdir ../../build-info/build-logs/$name" >> ../../build-info/build-list/$name
-        echo "mkdir ../../build-info/build-logs/$name/""$""date" >> ../../build-info/build-list/$name
-        echo "sudo rm -r -v ../../build-info/build-repos/$name" ">"">" "../../build-info/build-logs/$name/""$""date""/1-rm.log" >> ../../build-info/build-list/$name
-        echo "sudo cp -r -v $repo ../../build-info/build-repos/$name" ">"">" "../../build-info/build-logs/$name/""$""date""/2-copy.log" >> ../../build-info/build-list/$name
-        echo "sudo docker build -t $image ../../build-info/build-repos/$name/" ">"">" "../../build-info/build-logs/$name/""$""date""/3-build.log" >> ../../build-info/build-list/$name
-        echo "sudo docker push $image" ">"">" "../../build-info/build-logs/$name/""$""date""/4-push.log" >> ../../build-info/build-list/$name
-        echo >> ../../build-info/build-list/$name
-        echo >> ../../build-info/build-list/$name
-        echo "####" >> ../../build-info/build-list/$name
-
-}
-
-
-
-function gitb(){ 
-
-        echo >> ../../build-info/build-list/$name
-        echo >> ../../build-info/build-list/$name
-        echo "####" >> ../../build-info/build-list/$name
-        echo >> ../../build-info/build-list/$name
-        echo "#Builds the $name / $image image from the $repo repo" >> ../../build-info/build-list/$name
-        echo >> ../../build-info/build-list/$name
-        echo >> ../../build-info/build-list/$name
-        echo "mkdir ../../build-info/build-logs/$name" >> ../../build-info/build-list/$name
-        echo "mkdir ../../build-info/build-logs/$name/""$""date" >> ../../build-info/build-list/$name
-        echo "sudo rm -r -v ../../build-info/build-repos/$name" ">"">" "../../build-info/build-logs/$name/""$""date""/1-rm.log" >> ../../build-info/build-list/$name
-        echo "git clone $repo ../../build-info/build-repos/$name" ">"">" "../../build-info/build-logs/$name/""$""date""/2-clone.log" >> ../../build-info/build-list/$name
-        echo "sudo docker build -t $image ../../build-info/build-repos/$name/" ">"">" "../../build-info/build-logs/$name/""$""date""/3-build.log" >> ../../build-info/build-list/$name
-        echo "sudo docker push $image" ">"">" "../../build-info/build-logs/$name/""$""date""/4-push.log" >> ../../build-info/build-list/$name
-        echo >> ../../build-info/build-list/$name
-        echo >> ../../build-info/build-list/$name
-        echo "####" >> ../../build-info/build-list/$name
-        echo $name $image $repo
-
-}
-
 function cusgit(){
 
         echo >> ../build-custom/$list/build-list/$name   
@@ -109,12 +63,6 @@ function cusfol(){
 }
 
 case $4 in 
-
-        "dir"  )
-        folderb ;;
-
-        "git"  )
-        gitb ;;
 
         "cusgit" )
         cusgit ;;

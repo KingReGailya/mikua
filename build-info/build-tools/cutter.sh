@@ -144,13 +144,6 @@ case $1 in
 
                         case $4 in
 
-                            $nothing )
-
-                               confirmbasic 
-                               rm -r -v ../build-list/*
-                               
-                            ;;
-
                             * )
 
                                 case $5 in
@@ -205,13 +198,6 @@ case $1 in
                     
                     ;;
 
-                    $nothing )
-
-                        confirmbasic
-                        rm -r -v ../build-list/* 
-
-                    ;;
-
                     * )
                         case $4 in
 
@@ -251,13 +237,6 @@ case $1 in
 
                         cat ../build-help/help-cutter/help-repos
                    
-                    ;;
-
-                    $nothing )
-                        
-                        confirmbasic
-                        rm -r -v ../build-repos/*     
-                    
                     ;;
 
                     "frame" )

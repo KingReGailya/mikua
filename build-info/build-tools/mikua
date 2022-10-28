@@ -15,13 +15,13 @@ case $2 in
                 
                                 case $5 in 
 
-                                "git"  )
+                                "playlist"  )
                         
                                         $loc/build-frame.sh $6 $7 $8 cusgit $4
                         
                                 ;;
 
-                                "folder" )
+                                "song" )
                         
                                         $loc/build-frame.sh $6 $5 $8 cusfol $4
                         
@@ -29,18 +29,6 @@ case $2 in
                                 
                                 esac
                 
-                        ;;
-
-                        "folder" )
-        
-                                $loc/build-frame.sh $4 $5 $6 dir 
-        
-                        ;;
-
-                        "git" )
-
-                                $loc/build-frame.sh $4 $5 $6 git
-
                         ;;
                 
                 esac
@@ -50,12 +38,6 @@ case $2 in
         "make" )
 
                 case $3 in
-
-                        $nothing )
-                        
-                                $loc/make.sh
-
-                        ;;
 
                         * )
 
@@ -83,12 +65,6 @@ case $2 in
         "delete" )
 
                 case $3 in
-
-                $nothing ) 
-        
-                        echo o-o
-                
-                ;;
                 
                 * )
                         
@@ -127,13 +103,6 @@ case $2 in
                         
                         ;;
  
-
-                        $nothing )
-     
-                                ../../builder.sh
-     
-                        ;;
-                        
                         * )
                                 
                                 ../build-custom/$3/$3-builder.sh

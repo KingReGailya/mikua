@@ -29,13 +29,6 @@ case $1 in
     
     ;;
 
-
-    $nothing )
-    
-        default
-    
-    ;;
-    
     *  )
     
         custom
