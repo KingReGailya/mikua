@@ -1,10 +1,10 @@
 #!/bin/bash
 
-list=$4
-frame=$6
+list=$1 
+frame=$3
 
-cat ../build-list/$list/.opening >> ../build-list/$list/temp.sh
-cat ../build-list/$list/$frame >> ../build-list/$list/temp.sh
-chmod u+x ../build-list/$list/temp.sh
-../build-list/$list/temp.sh
-rm -v ../build-list/$list/temp.sh
+cat ../build-custom/$list/build-list/.opening >> ../build-custom/$list/build-list/temp.sh
+cat ../build-custom/$list/build-list/$frame >> ../build-custom/$list/build-list/temp.sh
+chmod u+x ../build-custom/$list/build-list/temp.sh
+../build-custom/$list/build-list/temp.sh
+rm -v ../build-custom/$list/build-list/temp.sh
