@@ -11,63 +11,49 @@
 #Agrument 5 tell's it weather to use the default or custom list        
 
 
-list=$5
+list=$1
 
-repo=$3
+dir=$4 
 
-image=$2
+link=$3
 
-name=$1
+name=$2
 
-function cusgit(){
+function add(){
 
-        echo >> ../build-custom/$list/build-list/$name   
         echo >> ../build-custom/$list/build-list/$name
-        echo "####" >> ../build-custom/$list/build-list/$name
+        echo  yt-dlp -f 'ba' -x --audio-format mp3 $link -o ''$dir'/%(playlist_index)02d - %(title)s.%(ext)s' >> ../build-custom/$list/build-list/$name
         echo >> ../build-custom/$list/build-list/$name
-        echo "#Builds the $name / $image image from the $repo repo" >> ../build-custom/$list/build-list/$name
-        echo >> ../build-custom/$list/build-list/$name
-        echo >> ../build-custom/$list/build-list/$name
-        echo "mkdir ../build-custom/$list/build-logs/$name" >> ../build-custom/$list/build-list/$name
-        echo "mkdir ../build-custom/$list/build-logs/$name/""$""date" >> ../build-custom/$list/build-list/$name
-        echo "sudo rm -r -v ../build-custom/$list/build-repos/$name" ">"">" "../build-custom/$list/build-logs/$name/""$""date""/1-rm.log" >> ../build-custom/$list/build-list/$name
-        echo "git clone $repo ../build-custom/$list/build-repos/$name" ">"">" "../build-custom/$list/build-logs/$name/""$""date""/2-clone.log" >> ../build-custom/$list/build-list/$name
-        echo "sudo docker build -t $image ../build-custom/$list/build-repos/$name/" ">"">" "../build-custom/$list/build-logs/$name/""$""date""/3-build.log" >> ../build-custom/$list/build-list/$name
-        echo "sudo docker push $image" ">"">" "../build-custom/$list/build-logs/$name/""$""date""/4-push.log" >> ../build-custom/$list/build-list/$name
-        echo >> ../build-custom/$list/build-list/$name
-        echo >> ../build-custom/$list/build-list/$name
-        echo "####" >> ../build-custom/$list/build-list/$name
-        echo $name $image $repo $list
 
 }
 
-function cusfol(){
-
-        echo >> ../build-custom/$list/build-list/$name   
-        echo >> ../build-custom/$list/build-list/$name
-        echo "####" >> ../build-custom/$list/build-list/$name
-        echo >> ../build-custom/$list/build-list/$name
-        echo "#Builds the $name / $image image from the $repo Directory" >> ../build-custom/$list/build-list/$name
-        echo >> ../build-custom/$list/build-list/$name
-        echo >> ../build-custom/$list/build-list/$name
-        echo "mkdir ../build-custom/$list/build-logs/$name" >> ../build-custom/$list/build-list/$name
-        echo "mkdir ../build-custom/$list/build-logs/$name/""$""date" >> ../build-custom/$list/build-list/$name
-        echo "sudo rm -r -v ../../build-info/build-repos/$name" ">"">" "../build-custom/$list/build-logs/$name/""$""date""/1-rm.log" >> ../build-custom/$list/build-list/$name
-        echo "sudo cp -r -v $repo ../../build-info/build-repos/$name" ">"">" "../build-custom/$list/build-logs/$name/""$""date""/2-copy.log" >> ../build-custom/$list/build-list/$name
-        echo "sudo docker build -t $image ../build-custom/$list/build-repos/$name/" ">"">" "../build-custom/$list/build-logs/$name/""$""date""/3-build.log" >> ../build-custom/$list/build-list/$name
-        echo "suod docker push $image" ">"">" "../build-custom/$list/build-logs/$name/""$""date""/4-push.log" >> ../build-custom/$list/build-list/$name
-        echo >> ../build-custom/$list/build-list/$name
-        echo >> ../build-custom/$list/build-list/$name
-        echo "####" >> ../build-custom/$list/build-list/$name
-
-}
+#function cusfol(){
+#
+#       echo >> ../build-custom/$list/build-list/$name   
+#        echo >> ../build-custom/$list/build-list/$name
+#        echo "####" >> ../build-custom/$list/build-list/$name
+#        echo >> ../build-custom/$list/build-list/$name
+#        echo "#Builds the $name / $image image from the $repo Directory" >> ../build-custom/$list/build-list/$name
+#        echo >> ../build-custom/$list/build-list/$name
+#        echo >> ../build-custom/$list/build-list/$name
+#        echo "mkdir ../build-custom/$list/build-logs/$name" >> ../build-custom/$list/build-list/$name
+#        echo "mkdir ../build-custom/$list/build-logs/$name/""$""date" >> ../build-custom/$list/build-list/$name
+#        echo "sudo rm -r -v ../../build-info/build-repos/$name" ">"">" "../build-custom/$list/build-logs/$name/""$""date""/1-rm.log" >> ../build-custom/$list/build-list/$name
+#        echo "sudo cp -r -v $repo ../../build-info/build-repos/$name" ">"">" "../build-custom/$list/build-logs/$name/""$""date""/2-copy.log" >> ../build-custom/$list/build-list/$name
+#        echo "sudo docker build -t $image ../build-custom/$list/build-repos/$name/" ">"">" "../build-custom/$list/build-logs/$name/""$""date""/3-build.log" >> ../build-custom/$list/build-list/$name
+#        echo "suod docker push $image" ">"">" "../build-custom/$list/build-logs/$name/""$""date""/4-push.log" >> ../build-custom/$list/build-list/$name
+#        echo >> ../build-custom/$list/build-list/$name
+#        echo >> ../build-custom/$list/build-list/$name
+#        echo "####" >> ../build-custom/$list/build-list/$name
+#
+#}
 
 case $4 in 
 
-        "cusgit" )
-        cusgit ;;
+        "add" )
+        add ;;
 
-        "cusfol" )
-        cusfol ;;
+#        "cusfol" )
+#       cusfol ;;
 
 esac

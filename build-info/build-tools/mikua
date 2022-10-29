@@ -5,33 +5,8 @@ loc=$1
 case $2 in
 
         "add"  )
-                case $3 in
-                
-                        "help" )
-                                cat ../build-help/help-add
-                        ;;
-
-                        "list" )
-                
-                                case $5 in 
-
-                                "playlist"  )
-                        
-                                        $loc/build-frame.sh $6 $7 $8 cusgit $4
-                        
-                                ;;
-
-                                "song" )
-                        
-                                        $loc/build-frame.sh $6 $5 $8 cusfol $4
-                        
-                                ;;
-                                
-                                esac
-                
-                        ;;
-                
-                esac
+   
+                $loc/build-frame.sh $4 $5 $6 $7
 
         ;;
 
