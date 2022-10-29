@@ -22,8 +22,8 @@ name=$2
 function add(){
 
         echo >> ../build-custom/$list/build-list/$name
-        echo  yt-dlp -f 'ba' -x --audio-format mp3 $link -o ''$dir'/%(playlist_index)02d - %(title)s.%(ext)s' >> ../build-custom/$list/build-list/$name
-        echo >> ../build-custom/$list/build-list/$name
+        echo  "yt-dlp -f 'ba' -x --audio-format mp3 $link -o ''$dir'/%(playlist_index)02d - %(title)s.%(ext)s'" ">"">" "../build-custom/$list/build-logs/$name/""$""date""/download.log" >> ../build-custom/$list/build-list/$name
+
 
 }
 
@@ -41,19 +41,24 @@ function add(){
 #        echo "sudo rm -r -v ../../build-info/build-repos/$name" ">"">" "../build-custom/$list/build-logs/$name/""$""date""/1-rm.log" >> ../build-custom/$list/build-list/$name
 #        echo "sudo cp -r -v $repo ../../build-info/build-repos/$name" ">"">" "../build-custom/$list/build-logs/$name/""$""date""/2-copy.log" >> ../build-custom/$list/build-list/$name
 #        echo "sudo docker build -t $image ../build-custom/$list/build-repos/$name/" ">"">" "../build-custom/$list/build-logs/$name/""$""date""/3-build.log" >> ../build-custom/$list/build-list/$name
-#        echo "suod docker push $image" ">"">" "../build-custom/$list/build-logs/$name/""$""date""/4-push.log" >> ../build-custom/$list/build-list/$name
+#        echo "sudo docker push $image" ">"">" "../build-custom/$list/build-logs/$name/""$""date""/4-push.log" >> ../build-custom/$list/build-list/$name
 #        echo >> ../build-custom/$list/build-list/$name
 #        echo >> ../build-custom/$list/build-list/$name
 #        echo "####" >> ../build-custom/$list/build-list/$name
 #
 #}
 
-case $4 in 
 
-        "add" )
-        add ;;
+
+add 
+
+
+#case $4 in 
+
+#        "add" )
+#        add ;;
 
 #        "cusfol" )
 #       cusfol ;;
 
-esac
+#esac

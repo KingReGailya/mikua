@@ -59,13 +59,11 @@ case $name in
 
     * )
  
-
         name=$name
         mkdir ../build-custom/$name
         mkdir ../build-custom/$name/build-list
         mkdir ../build-custom/$name/build-logs
-        mkdir ../build-custom/$name/build-repos
-        cp -r -v ../build-list/.opening ../build-custom/$name/build-list/.opening 
+        cp -r -v ../../.opening ../build-custom/$name/build-list/.opening 
 
     ;;
 

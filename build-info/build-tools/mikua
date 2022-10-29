@@ -78,6 +78,11 @@ case $2 in
                         
                         ;;
  
+                        "frame" )
+                                
+                        ;;
+
+
                         * )
                                 
                                 ../build-custom/$3/$3-builder.sh
