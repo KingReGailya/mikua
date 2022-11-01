@@ -1,0 +1,2 @@
+#Put all list you want to run here
+#Use mikua run LIST
