@@ -1,0 +1,5 @@
+#!/bin/bash
+loc=/git
+cd /git/build-info/build-tools
+
+/git/build-info/build-tools/mikua /git/build-info/build-tools $*

@@ -8,3 +8,7 @@ RUN apt-get update && apt-get install -y git
 RUN curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
 RUN chmod a+rx /usr/local/bin/yt-dlp
 RUN mkdir /downloads
+
+RUN git clone http://192.168.2.175:3000/KingReGailya/Miku-yta.git /git 
+COPY mikua /bin/mikua
+RUN mkdir /downloads
