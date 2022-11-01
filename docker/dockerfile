@@ -3,7 +3,7 @@ RUN apt update
 
 #install dependises 
 RUN apt install apt-utils
-RUN apt -y install nano curl python3 ffmpeg zip
+RUN apt -y install nano curl python3 ffmpeg zip cron
 RUN apt-get update && apt-get install -y git
 
 #installs YT-DLP
@@ -17,11 +17,8 @@ COPY mikua /bin/mikua
 RUN chmod u+x /bin/mikua 
 RUN chmod u+x /git/build-info/build-tools/*
 
-RUN mkdir /downloads
-
-
 #Makes cron 
 
-RUN ln /git/build-info/cron-config.txt /etc/cron.d/Cron
+RUN ln /git/build-info/build-custom/cron-config.txt /etc/cron.d/Cron
 RUN chmod 0644 /etc/cron.d/Cron
-RUN crontab /etc/cron.d/cron
+RUN crontab /etc/cron.d/Cron

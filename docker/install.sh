@@ -26,9 +26,6 @@ function install(){
 
 }
 
-
-
-
 function yesnt(){
         
         read answer     

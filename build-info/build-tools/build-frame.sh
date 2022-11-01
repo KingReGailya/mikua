@@ -37,7 +37,7 @@ function add(){
         echo "mkdir ../build-custom/$list/build-logs/$name" >> ../build-custom/$list/build-list/$name
         echo "mkdir ../build-custom/$list/build-logs/$name/""$""date" >> ../build-custom/$list/build-list/$name  
         echo >> ../build-custom/$list/build-list/$name
-        echo  "yt-dlp -f 'ba' -x --audio-format mp3 $link -o '$dir/track-%(playlist_index)02d - %(title)s.%(ext)s' --download-archive ../build-custom/$list/build-logs/$name.ark " ">"">" "../build-custom/$list/build-logs/$name/""$""date""/download.log" >> ../build-custom/$list/build-list/$name
+        echo  "yt-dlp -f 'ba' -x --audio-format mp3 $link -o '$dir/track-%(playlist_index)02d - %(title)s.%(ext)s' --download-archive ../build-custom/$list/build-logs/$name/$name.ark " ">"">" "../build-custom/$list/build-logs/$name/""$""date""/download.log" >> ../build-custom/$list/build-list/$name
 
 }
 

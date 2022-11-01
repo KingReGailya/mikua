@@ -7,11 +7,16 @@ case $2 in
         "add"  )
                 
                 case $3 in
+
                         "help" )
                                 cat ../build-help/help-add
 
+                        ;;
+
                         * ) 
+                
                                $loc/build-frame.sh $4 $5 $6 $7         
+                
                         ;;
                 esac 
         ;;
@@ -109,6 +114,12 @@ case $2 in
         "data" )
 
                 ./import-export.sh $loc $3 $4 $5 $6 $7 $8 $9
+
+        ;;
+
+        "edit" )
+
+                nano ../build-custom/.cron-config.txt
 
         ;;
 
