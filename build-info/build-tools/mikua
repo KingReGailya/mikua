@@ -5,9 +5,15 @@ loc=$1
 case $2 in
 
         "add"  )
-   
-                $loc/build-frame.sh $4 $5 $6 $7
+                
+                case $3 in
+                        "help" )
+                                cat ../build-help/help-add
 
+                        * ) 
+                               $loc/build-frame.sh $4 $5 $6 $7         
+                        ;;
+                esac 
         ;;
 
         "make" )
