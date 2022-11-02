@@ -6,7 +6,7 @@ services:
 
     container_name: mikua
 
-    image: miku-yta
+    image: kingregailya/mikua
 
     volumes:
       - ./data:/downloads
