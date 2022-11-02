@@ -3,15 +3,11 @@ This will delete all content of a chossen or all the lists logs and repos includ
 
 This is done by running 
 
-mikub delete 
-
-This will delete all the data of the default list 
-
-mikub delete list LIST-NAME
+mikua delete list LIST-NAME
 
 This will delete all the data of the given list 
 
-mikub delete all 
+mikua delete all 
 
 This will delete all the data for all lists
 

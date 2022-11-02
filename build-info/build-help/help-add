@@ -1,20 +1,14 @@
 
 This command let's you add a new frame to a list
 
-For example in order to add a frame to the default list 
+mikua add list LIST-NAME NAME LINK 
 
-mikub add TYPE Name Image/Name LOCATION
+The name option reffers to what mikua will call this frame 
+and the LIST-NAME will tell mikua where to put the frame
 
-In the TYPE slot put what it's building from such as a git repo or local folder
-to specify a git repo put "git" and for a folder put "folder"
+The data downloaded from this frame will be put in
+/downloads/NAME
 
-In order to add a frame to a custom list use add list to the command
+However you can put a custom location from root and the end of the command
 
-mikub add list LIST-NAME TYPE Name Image/Name LOCATION
-
-Here is the command I used for the Miku Youtube Downloader Site
-
-mikub add list miku-dlp git dlp-site kingregailya/miku-dlp-site https://github.com/KingReGailya/Miku-Dlp-Site.git
-
-This adds a frame named dlp-site to the miku-dlp list building the image kingregailya/miku-dlp-site from this git repo https://github.com/KingReGailya/Miku-Dlp-Site.git
-
+mikua add list LIST-NAME NAME LINK /home/EXAMPLE/downloads

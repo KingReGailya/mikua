@@ -5,13 +5,9 @@ the logs and repos will stay
 
 To clear all frames in a given list use
 
-mikub clear list LISTNAME 
-
-For the default list run
-
-mikub clear list
+mikua clear list LISTNAME 
 
 You can remvoe only the frame you want with 
 
-mikub clear list LIST-NAME frame FRAME-NAME
+mikua clear list LIST-NAME frame FRAME-NAME
 
