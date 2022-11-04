@@ -82,8 +82,9 @@ case $name in
         mkdir ../build-custom/$name
         mkdir ../build-custom/$name/build-list
         mkdir ../build-custom/$name/build-logs
-        echo $type >> ../build-custom/$name/.type
-        cp -r -v ../../.opening ../build-custom/$name/build-list/.opening 
+        cp -rv ../build-custom/.config-templates/$type ../build-custom/$name/.config
+        echo $type >> ../build-custom/$name/.config/type
+        cp -rv ../../.opening ../build-custom/$name/build-list/.opening 
 
     ;;
 
