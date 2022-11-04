@@ -16,7 +16,7 @@ function yesnt(){
 
             mkdir ../build-custom/$name
             mkdir ../build-custom/$name/build-list
-            echo $type >> ../$name/build-list/.type.var
+            echo $type >> ../$name/build-list/.type
             cp -r -v ../.opening ../build-custom/$name/build-list/.opening
 
         ;;

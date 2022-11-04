@@ -21,7 +21,7 @@ case $2 in
 
                         * ) 
                 
-                               $loc/build-frame.sh $4 $5 $6 $7         
+                               $loc/build-frame.sh $4 $5 $6 $7 $8 $9      
                 
                         ;;
                 esac 
@@ -33,7 +33,7 @@ case $2 in
 
                         * )
 
-                                $loc/make.sh $3
+                                $loc/make.sh $3 $4 $5 $6 $7 $8 $9
 
                         ;; 
 
@@ -47,7 +47,7 @@ case $2 in
 
                         "list" )
                         
-                                $loc/newlist.sh $4
+                                $loc/newlist.sh $4 $5 $6 $7 $8 $9 
                 
                         ;;
 
