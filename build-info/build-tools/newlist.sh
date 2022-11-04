@@ -16,7 +16,7 @@ function yesnt(){
 
             mkdir ../build-custom/$name
             mkdir ../build-custom/$name/build-list
-            echo $type >> ../$name/build-list/.type
+            echo $type >> ../build-custom/$name/.type
             cp -r -v ../.opening ../build-custom/$name/build-list/.opening
 
         ;;
@@ -44,6 +44,24 @@ function confirm (){
 
 }
 
+
+case $type in 
+
+    "song" )
+    
+    ;;
+
+    "video" )
+    
+    ;;
+    
+    * )
+        echo "invaild list type"
+        exit
+    ;;
+esac
+
+
 case $name in
 
     $nothing )
@@ -64,6 +82,7 @@ case $name in
         mkdir ../build-custom/$name
         mkdir ../build-custom/$name/build-list
         mkdir ../build-custom/$name/build-logs
+        echo $type >> ../build-custom/$name/.type
         cp -r -v ../../.opening ../build-custom/$name/build-list/.opening 
 
     ;;
