@@ -37,42 +37,11 @@ function add(){
         echo "mkdir ../build-custom/$list/build-logs/$name" >> ../build-custom/$list/build-list/$name
         echo "mkdir ../build-custom/$list/build-logs/$name/""$""date" >> ../build-custom/$list/build-list/$name  
         echo >> ../build-custom/$list/build-list/$name
-        echo  "yt-dlp -f 'ba' -x --audio-format mp3 $link -o '$dir/track-%(playlist_index)02d - %(title)s.%(ext)s' --download-archive ../build-custom/$list/build-logs/$name/$name.ark " ">"">" "../build-custom/$list/build-logs/$name/""$""date""/download.log" >> ../build-custom/$list/build-list/$name
+        echo  "yt-dlp -f 'ba' -u -p -x --audio-format mp3 $link -o '$dir/track-%(playlist_index)02d - %(title)s.%(ext)s'  --geo-bypass --download-archive ../build-custom/$list/build-logs/$name/$name.ark " ">"">" "../build-custom/$list/build-logs/$name/""$""date""/download.log" >> ../build-custom/$list/build-list/$name
 
 }
-
-#function cusfol(){
-#
-#       echo >> ../build-custom/$list/build-list/$name   
-#        echo >> ../build-custom/$list/build-list/$name
-#        echo "####" >> ../build-custom/$list/build-list/$name
-#        echo >> ../build-custom/$list/build-list/$name
-#        echo "#Builds the $name / $image image from the $repo Directory" >> ../build-custom/$list/build-list/$name
-#        echo >> ../build-custom/$list/build-list/$name
-#        echo >> ../build-custom/$list/build-list/$name
-#        echo "mkdir ../build-custom/$list/build-logs/$name" >> ../build-custom/$list/build-list/$name
-#        echo "mkdir ../build-custom/$list/build-logs/$name/""$""date" >> ../build-custom/$list/build-list/$name
-#        echo "sudo rm -r -v ../../build-info/build-repos/$name" ">"">" "../build-custom/$list/build-logs/$name/""$""date""/1-rm.log" >> ../build-custom/$list/build-list/$name
-#        echo "sudo cp -r -v $repo ../../build-info/build-repos/$name" ">"">" "../build-custom/$list/build-logs/$name/""$""date""/2-copy.log" >> ../build-custom/$list/build-list/$name
-#        echo "sudo docker build -t $image ../build-custom/$list/build-repos/$name/" ">"">" "../build-custom/$list/build-logs/$name/""$""date""/3-build.log" >> ../build-custom/$list/build-list/$name
-#        echo "sudo docker push $image" ">"">" "../build-custom/$list/build-logs/$name/""$""date""/4-push.log" >> ../build-custom/$list/build-list/$name
-#        echo >> ../build-custom/$list/build-list/$name
-#        echo >> ../build-custom/$list/build-list/$name
-#        echo "####" >> ../build-custom/$list/build-list/$name
-#
-#}
-
 
 
 add 
 
-
-#case $4 in 
-
-#        "add" )
-#        add ;;
-
-#        "cusfol" )
-#       cusfol ;;
-
-#esac
+ 

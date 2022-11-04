@@ -27,10 +27,9 @@ case $2 in
         cp -r -v ../build-custom ../export
         cp -r -v ../build-list/* ../export/build-default/build-list/*
         cp -r -v ../build-logs ../export/build-default
-        cp -r -v ../build-repos ../export/build-default
         cd ..
         tar -czf $name.tar export
-        rm -r -v export
+        rm -rvf export
         
     ;;
 
@@ -40,8 +39,7 @@ case $2 in
       cp -r -v $1/../export/build-custom/* ../build-custom
       cp -r -v $1/../export/build-default/build-list ../build-list
       cp -r -v $1/../export/build-default/build-logs ../build-logs
-      cp -r -v $1/../export/build-default/build-repos ../build-repos
-      rm -r -v ../export
+      rm -rvf ../export
 
     ;;
     

@@ -2,8 +2,8 @@
 
 #makes a new list
 
-name=$1
-
+name=$2
+type=$1
 
 function yesnt(){
 
@@ -16,6 +16,7 @@ function yesnt(){
 
             mkdir ../build-custom/$name
             mkdir ../build-custom/$name/build-list
+            echo $type >> ../$name/build-list/.type.var
             cp -r -v ../.opening ../build-custom/$name/build-list/.opening
 
         ;;
