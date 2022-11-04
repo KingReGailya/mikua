@@ -23,7 +23,7 @@ envoirment=`cat ../build-custom/$list/.config/envoirment`
 
 download=`cat ../build-custom/$list/.config/download`
 
-namemethod="$dir/$begin-$arguments-$end.%(ext)s"
+namemethod="$dir/$begin$arguments$end.%(ext)s"
 
 case $dir in
 
