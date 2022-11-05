@@ -15,12 +15,12 @@ RUN mkdir /downloads
 COPY build-info /mikua 
 COPY mikua /bin/mikua
 RUN chmod u+x /bin/mikua 
-RUN chmod u+x /git/build-info/build-tools/*
+RUN chmod u+x /mikua/build-info/build-tools/*
 
 #Makes cron 
 
-COPY cron-config.txt /git/build-info/build-custom/cron-config.txt
-RUN ln /git/build-info/build-custom/cron-config.txt /etc/cron.d/Cron
+COPY cron-config.txt /mikua/build-info/build-custom/cron-config.txt
+RUN ln /mikua/build-info/build-custom/cron-config.txt /etc/cron.d/Cron
 RUN chmod 0644 /etc/cron.d/Cron
 RUN crontab /etc/cron.d/Cron
 
