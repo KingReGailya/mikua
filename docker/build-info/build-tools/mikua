@@ -125,7 +125,30 @@ case $2 in
 
         "edit" )
 
-                nano ../build-custom/cron-config.txt
+                case $3 in 
+
+                        $nothing )
+                                nano ../build-custom/cron-config.txt
+                        ;;
+
+                        * )
+                                case $4 in 
+
+                                        $nothing )
+
+                                                echo 'the command reqiures a frame to edit'
+                                        
+                                        ;;
+                                        
+                                        * )
+                                                nano ../build-custom/$3/build-list/$4
+                                        ;;
+
+                                esac
+                        ;;
+                
+                esac
+                
 
         ;;
 
