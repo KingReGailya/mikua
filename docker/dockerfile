@@ -12,16 +12,13 @@ RUN chmod a+rx /usr/local/bin/yt-dlp
 RUN mkdir /downloads
 
 #installs mikua
-COPY build-info /mikua 
+COPY build-info /mikua/build-info 
 COPY mikua /bin/mikua
 RUN chmod u+x /bin/mikua 
 RUN chmod u+x /mikua/build-info/build-tools/*
 
 #Makes cron 
-
 COPY cron-config.txt /mikua/build-info/build-custom/cron-config.txt
 RUN ln /mikua/build-info/build-custom/cron-config.txt /etc/cron.d/Cron
 RUN chmod 0644 /etc/cron.d/Cron
 RUN crontab /etc/cron.d/Cron
-
-ENTRYPOINT [ "entrypoint.sh" ]

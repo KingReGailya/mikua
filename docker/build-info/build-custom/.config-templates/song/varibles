@@ -1,0 +1,7 @@
+
+begin=`cat .config/name-begin`
+end=`cat .config/name-end`
+arguments=`cat .config/arguments`
+envoirment=`cat .config/envoirment`
+download=`cat .config/download`
+

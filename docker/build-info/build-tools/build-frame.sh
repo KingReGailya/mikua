@@ -40,7 +40,7 @@ function add(){
         echo "mkdir ../build-custom/$list/build-logs/$name" >> ../build-custom/$list/build-list/$name
         echo "mkdir ../build-custom/$list/build-logs/$name/""$""date" >> ../build-custom/$list/build-list/$name  
         echo >> ../build-custom/$list/build-list/$name
-        echo  "yt-dlp $download $link -o '$namemethod'  $envoirment --download-archive ../build-custom/$list/build-logs/$name/$name.ark " ">"">" "../build-custom/$list/build-logs/$name/""$""date""/download.log" >> ../build-custom/$list/build-list/$name
+        echo  "yt-dlp ""$""download"" ""$""link"" -o '""$""dir/""$""begin""$""end"".%(ext)s'  ""$""envoirment"" --download-archive ../build-custom/$list/build-logs/$name/$name.ark " ">"">" "../build-custom/$list/build-logs/$name/""$""date""/download.log" >> ../build-custom/$list/build-list/$name
 
 }
 

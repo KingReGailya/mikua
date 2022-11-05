@@ -1,5 +1,5 @@
 #!/bin/bash
-loc=/git
-cd /git/build-info/build-tools
+loc=/mikua
+cd /mikua/build-info/build-tools
 
-/git/build-info/build-tools/mikua /git/build-info/build-tools $*
+/mikua/build-info/build-tools/mikua /mikua/build-info/build-tools $*
