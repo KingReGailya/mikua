@@ -83,6 +83,7 @@ case $name in
         mkdir ../build-custom/$name/build-list
         mkdir ../build-custom/$name/build-logs
         cp -rv ../build-custom/.config-templates/$type ../build-custom/$name/.config
+        mkdir ../build-custom/.config-templates/$type/frames
         echo $type >> ../build-custom/$name/.config/type
         cp -rv ../../.opening ../build-custom/$name/build-list/.opening 
 
