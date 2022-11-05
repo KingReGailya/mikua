@@ -12,7 +12,7 @@ RUN chmod a+rx /usr/local/bin/yt-dlp
 RUN mkdir /downloads
 
 #installs mikua
-RUN git clone https://github.com/KingReGailya/mikua.git /git 
+COPY build-info /mikua 
 COPY mikua /bin/mikua
 RUN chmod u+x /bin/mikua 
 RUN chmod u+x /git/build-info/build-tools/*
