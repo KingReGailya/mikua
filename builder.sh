@@ -4,5 +4,3 @@
 # Proceed with caiojsaobncs aiodhnas
 
 date=`date +%y-%m-%d`
-
-
