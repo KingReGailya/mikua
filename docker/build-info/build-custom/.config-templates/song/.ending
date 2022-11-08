@@ -1,0 +1,10 @@
+echo '#!/bin/bash' >> ../build-custom/$list/complied.sh
+cat ../build-custom/$list/temp/* ../build-custom/$list/complied.sh
+chmod u+x ../build-custom/$list/complied.sh
+case $remove in 
+true )
+rm -rfv ../build-custom/$list/complied.sh
+;;
+false )
+;;
+esac

@@ -4,5 +4,6 @@ end=`cat ../build-custom/$list/.config/name-end`
 arguments=`cat ../build-custom/$list/.config/arguments`
 envoirment=`cat ../build-custom/$list/.config/envoirment`
 dir=`cat ../build-custom/$list/.config/dir`
-
+remove="true"
+q="'"
 
