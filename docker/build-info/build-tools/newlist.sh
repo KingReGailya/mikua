@@ -45,24 +45,6 @@ function confirm (){
 
 }
 
-
-case $type in 
-
-    "song" )
-    
-    ;;
-
-    "video" )
-    
-    ;;
-    
-    * )
-        echo "invaild list type"
-        exit
-    ;;
-esac
-
-
 case $name in
 
     $nothing )
@@ -83,6 +65,7 @@ case $name in
         mkdir ../build-custom/$name
         mkdir ../build-custom/$name/build-list
         mkdir ../build-custom/$name/build-logs
+        mkdir ../build-custom/$name/temp
         cp -rv ../build-custom/.config-templates/$type ../build-custom/$name/.config
         mkdir ../build-custom/.config-templates/$type/frames
         echo $type >> ../build-custom/$name/.config/type

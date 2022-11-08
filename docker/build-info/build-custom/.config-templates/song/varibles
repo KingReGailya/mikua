@@ -1,9 +1,9 @@
-download=`cat ../build-custom/$list/.config/download`
-begin=`cat ../build-custom/$list/.config/name-begin`
-end=`cat ../build-custom/$list/.config/name-end`
-arguments=`cat ../build-custom/$list/.config/arguments`
-envoirment=`cat ../build-custom/$list/.config/envoirment`
-dir=`cat ../build-custom/$list/.config/dir`
+download=` -f 'ba' -x --audio-format mp3`
+begin=`0`
+end=`.%(ext)s`
+arguments=`%(playlist_index)02d - %(title)s`
+envoirment=`  --geo-bypass`
+dir=`/downloads/$list`
 remove="true"
 q="'"
 

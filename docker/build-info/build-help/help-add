@@ -9,6 +9,3 @@ and the LIST-NAME will tell mikua where to put the frame
 The data downloaded from this frame will be put in
 /downloads/NAME
 
-However you can put a custom location from root and the end of the command
-
-mikua add list LIST-NAME NAME LINK /home/EXAMPLE/downloads

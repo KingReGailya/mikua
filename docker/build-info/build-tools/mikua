@@ -9,6 +9,7 @@ case $2 in
                 case $3 in
 
                         "help" )
+
                                 cat ../build-help/help-add
 
                         ;;
@@ -24,7 +25,9 @@ case $2 in
                                $loc/build-frame.sh $4 $5 $6 $7 $8 $9      
                 
                         ;;
+
                 esac 
+
         ;;
 
         "make" )
@@ -51,7 +54,14 @@ case $2 in
                 
                         ;;
 
+                        "help" )
+
+                                cat ../build-help/help-new
+
+                        ;;
+
                 esac
+
         ;;
 
         "delete" )
@@ -109,6 +119,7 @@ case $2 in
                         ;;
 
                 esac
+
         ;;
 
         "install" )
@@ -128,10 +139,13 @@ case $2 in
                 case $3 in 
 
                         $nothing )
+
                                 nano ../build-custom/cron-config.txt
+
                         ;;
 
                         * )
+
                                 case $4 in 
 
                                         $nothing )
@@ -141,15 +155,17 @@ case $2 in
                                         ;;
                                         
                                         * )
+
                                                 nano ../build-custom/$3/build-list/$4
+
                                         ;;
 
                                 esac
+
                         ;;
                 
                 esac
                 
-
         ;;
 
 esac

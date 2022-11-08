@@ -10,7 +10,7 @@ services:
 
     volumes:
       - ./data:/downloads
-      - ./config:/git/build-info/build-custom
+      - ./config:/mikua/build-info/build-custom
 
     restart: unless-stopped
 

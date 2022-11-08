@@ -15,6 +15,9 @@ type=`cat ../build-custom/$list/.config/type`
 
 function add(){
 
+        echo >> ../build-custom/$list/build-list/$name
+        echo '###'
+        echo >> ../build-custom/$list/build-list/$name
         echo "mkdir ../build-custom/$list/build-logs/$name" >> ../build-custom/$list/build-list/$name
         echo name=$name >> ../build-custom/$list/build-list/$name
         echo link=$link >> ../build-custom/$list/build-list/$name
@@ -27,6 +30,8 @@ function add(){
         partthree=`echo  ../build-custom/"$"list/build-logs/"$"name/"$"date/download.log`
         all=`echo 'echo' $partone $parttwo ">>" $partthree '>> ../build-custom/$list/temp/$name.temp'`
         echo $all >> ../build-custom/$list/build-list/$name
+        echo >> ../build-custom/$list/build-list/$name
+        echo '###' >> ../build-custom/$list/build-list/$name
 
 }
 
