@@ -67,6 +67,7 @@ case $name in
         mkdir ../build-custom/$name/build-logs
         mkdir ../build-custom/$name/temp
         cp -rv ../build-custom/.config-templates/$type ../build-custom/$name/.config
+        echo list=$list >> ../build-custom/$name/.config/varibles
         mkdir ../build-custom/.config-templates/$type/frames
         echo $type >> ../build-custom/$name/.config/type
 
