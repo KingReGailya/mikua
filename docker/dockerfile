@@ -18,7 +18,8 @@ RUN chmod u+x /bin/mikua
 RUN chmod u+x /mikua/build-info/build-tools/*
 
 #Makes cron 
-COPY cron-config.txt /mikua/build-info/build-custom/cron-config.txt
-RUN ln /mikua/build-info/build-custom/cron-config.txt /etc/cron.d/Cron
-RUN chmod 0644 /etc/cron.d/Cron
-RUN crontab /etc/cron.d/Cron
+COPY cron-config /etc/cron.d/cron-config
+RUN chmod 0644 /etc/cron.d/cron-config
+RUN crontab /etc/cron.d/cron-config
+RUN touch /var/log/cron.log
+CMD cron && tail -f /var/log/cron.log
