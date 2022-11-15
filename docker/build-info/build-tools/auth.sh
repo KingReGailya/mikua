@@ -12,4 +12,5 @@ cat ../build-custom/$list/temp.temp >> ../build-custom/$list/build-list/$frame
 echo auth = >> ../build-custom/$list/build-list/$frame
 
 rm ../build-custom/$list/temp.temp
+
 #mikua add auth LIST FRAME USERNAME PASSWORD

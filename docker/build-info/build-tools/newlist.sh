@@ -2,7 +2,7 @@
 
 #makes a new list
 
-name=$2
+list=$2
 type=$1
 
 function yesnt(){
@@ -14,11 +14,11 @@ function yesnt(){
 
         "y" )
 
-            mkdir ../build-custom/$name
-            mkdir ../build-custom/$name/build-list
-            mkdir ../build-custom/$name/temp
-            echo $type >> ../build-custom/$name/.type
-            cp -r -v ../.opening ../build-custom/$name/build-list/.opening
+            mkdir ../build-custom/$list
+            mkdir ../build-custom/$list/build-list
+            mkdir ../build-custom/$list/temp
+            echo $type >> ../build-custom/$list/.type
+            cp -r -v ../.opening ../build-custom/$list/build-list/.opening
 
         ;;
 
@@ -40,12 +40,12 @@ function yesnt(){
 
 function confirm (){
  
-  echo "the list name $name can cause confilcts with commands"
+  echo "the list list $list can cause confilcts with commands"
   yesnt 
 
 }
 
-case $name in
+case $list in
 
     $nothing )
 
@@ -61,15 +61,15 @@ case $name in
 
     * )
  
-        name=$name
-        mkdir ../build-custom/$name
-        mkdir ../build-custom/$name/build-list
-        mkdir ../build-custom/$name/build-logs
-        mkdir ../build-custom/$name/temp
-        cp -rv ../build-custom/.config-templates/$type ../build-custom/$name/.config
-        echo list=$list >> ../build-custom/$name/.config/varibles
+        list=$list
+        mkdir ../build-custom/$list
+        mkdir ../build-custom/$list/build-list
+        mkdir ../build-custom/$list/build-logs
+        mkdir ../build-custom/$list/temp
+        cp -rv ../build-custom/.config-templates/$type ../build-custom/$list/.config
+        echo list=$list >> ../build-custom/$list/.config/varibles
         mkdir ../build-custom/.config-templates/$type/frames
-        echo $type >> ../build-custom/$name/.config/type
+        echo $type >> ../build-custom/$list/.config/type
 
     ;;
 

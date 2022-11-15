@@ -16,24 +16,39 @@ type=`cat ../build-custom/$list/.config/type`
 function add(){
 
         echo >> ../build-custom/$list/build-list/$name
+
         echo '###' >> ../build-custom/$list/build-list/$name
+
         echo >> ../build-custom/$list/build-list/$name
+
         echo "mkdir ../build-custom/$list/build-logs/$name" >> ../build-custom/$list/build-list/$name
+
         echo name=$name >> ../build-custom/$list/build-list/$name
+
         echo link=$link >> ../build-custom/$list/build-list/$name
-        echo down='$dir/$list/'
+
+        echo down='$dir/$list/' >> ../build-custom/$list/build-list/$name
+
         echo "mkdir ../build-custom/$list/build-logs/$name/""$""date" >> ../build-custom/$list/build-list/$name
+
         echo 'mkdir ''$dir/$list $dir/$list/$name''' >> ../build-custom/$list/build-list/$name
+
         echo >> ../build-custom/$list/build-list/$name
+
         thing=`echo "$"q"$"down/"$"begin"$"arguments"$"end"$"q`
-        partone=`echo yt-dlp "$"download $link`
+
+        partone=`echo yt-dlp "$"download "$"auth $link`
+
         parttwo=`echo "-o" $thing "$"envoirment --download-archive ../build-custom/"$"list/build-logs/"$"name/"$"name.ark`
+
         partthree=`echo  ../build-custom/"$"list/build-logs/"$"name/"$"date/download.log`
+
         all=`echo 'echo' $partone $parttwo ">>" $partthree '>> ../build-custom/$list/temp/$name.temp'`
+
         echo $all >> ../build-custom/$list/build-list/$name
+
         echo >> ../build-custom/$list/build-list/$name
-        echo ../build-custom/$list/complied.sh >> ../build-custom/$list/build-list/$name
-        echo >> ../build-custom/$list/build-list/$name
+        
         echo '###' >> ../build-custom/$list/build-list/$name
 
 }
