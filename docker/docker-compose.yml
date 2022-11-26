@@ -1,18 +1,15 @@
 version: "3"
 
 services:
- 
-  mikua:
-
+   mikua:
     container_name: mikua
-
     image: kingregailya/mikua
-
     volumes:
       - ./data:/downloads
-      - ./config:/mikua/build-info/build-custom
-
+      - 'mikua-config:/mikua/build-info/build-custom'
     restart: unless-stopped
-
     stdin_open: true 
     tty: true
+
+volumes:
+  mikua-config:

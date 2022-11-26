@@ -1,15 +1,13 @@
 #!/bin/bash
 
+#Not yet functioning 
+
 list=$1
 
 frame=$2
 
-echo '#!/bin/bash' >> /temp.sh
-
+echo '#!/bin/bash' >> ..
 cat .config/varibles >> /temp.sh
-
 cat build-list/$frame >> /temp.sh
-
 echo "mikua clear list $list frame $frame" >> /temp.sh
-
 echo 'mikua add list $list $name $link' >> /temp.sh
