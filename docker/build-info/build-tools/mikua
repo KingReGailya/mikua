@@ -149,7 +149,7 @@ case $2 in
         ;;
 
         * )
-                ../custom-tools/$2/main.sh $loc $3 $4 $5 $6 $7 $8 $9
+                ../build-custom/.custom-tools/$2/main.sh $loc $3 $4 $5 $6 $7 $8 $9
         ;;
 
 esac
