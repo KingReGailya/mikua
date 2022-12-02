@@ -24,3 +24,6 @@ RUN crontab /etc/cron.d/cron-config
 RUN touch /var/log/cron.log
 CMD cron && tail -f /var/log/cron.log
 RUN chmod u+x /mikua/build-info/build-custom/tasks.sh
+
+#Tells mikua weather this is installed on OS or Docker
+RUN echo docker >> /mikua/build-info/version-installed

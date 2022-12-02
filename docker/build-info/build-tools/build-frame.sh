@@ -26,7 +26,7 @@ function add(){
         echo 'mkdir ''$dir/$list $dir/$list/$name''' >> ../build-custom/$list/build-list/$name
         echo >> ../build-custom/$list/build-list/$name
         thing=`echo "$"q"$"down/"$"begin"$"arguments"$"end"$"q`
-        partone=`echo yt-dlp "$"download "$"auth $link`
+        partone=`echo yt-dlp "$"download "$"auth "$"link`
         parttwo=`echo "-o" $thing "$"envoirment --download-archive ../build-custom/"$"list/build-logs/"$"name/"$"name.ark`
         partthree=`echo  ../build-custom/"$"list/build-logs/"$"name/"$"date/download.log`
         all=`echo 'echo' $partone $parttwo "$"arrow $partthree '>> ../build-custom/$list/temp/$name.temp'`

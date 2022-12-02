@@ -15,11 +15,10 @@ function install(){
         sudo chmod u+x /bin/mikua
         sudo chmod 777 /bin/mikua 
         sudo chmod u+x build-info/build-tools/*
+        echo "Os" >> $PWD/build-info/installed-version
         curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
         chmod a+rx /usr/local/bin/yt-dlp
-
-
-
+        
 }
 
 function yesnt(){
