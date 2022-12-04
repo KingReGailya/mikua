@@ -38,7 +38,10 @@ case $2 in
                 
                         ;;
 
-
+                        * )
+                                echo unknown tool
+                                echo If you are trying to use a plugin use the name the plugin was imported with
+                        ;;
 
                 esac 
 
