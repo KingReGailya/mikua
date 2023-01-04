@@ -56,8 +56,8 @@ git clone $link ../temp
 case $type in
 
     "plugin" )
-             
-        required=`ls ../temp/plugins/$template/required`
+
+        required=`ls ../temp/plugin/$template/required`
 
         case $required in
 
@@ -67,9 +67,7 @@ case $type in
                 confirmbasic 
 
             ;;
-
-
-
+            
         esac 
         
         cp -rv ../temp/plugin/$template ../build-custom/.custom-tools/$name
@@ -78,6 +76,8 @@ case $type in
     ;;
 
     "template" )
+
+        cp -rv ../temp/template/$template ../build-custom/.config-templates/$name
 
     ;;
 
@@ -92,3 +92,5 @@ case $type in
     ;;
 
 esac 
+
+rm -rf ../build-custom/temp
