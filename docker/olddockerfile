@@ -1,9 +1,12 @@
 FROM alpine
+RUN apt update
+
+
 
 #install dependises 
-RUN apk update
-RUN apk add bash git
-RUN apk add nano curl python3 ffmpeg zip
+RUN apt install apt-utils
+RUN apt -y install nano curl python3 ffmpeg zip cron
+RUN apt-get update && apt-get install -y git
 
 #installs YT-DLP
 RUN curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
@@ -22,7 +25,7 @@ RUN chmod 0644 /etc/crontabs/root
 RUN crontab /etc/crontabs/root 
 RUN chmod u+x /mikua/build-info/build-custom/tasks.sh
 
+#Tells mikua weather this is installed on OS or Docker
 RUN echo docker >> /mikua/build-info/version-installed
-RUN echo alpine >> /mikua/build-info/OS-installed
 
 WORKDIR /mikua/build-info/build-custom
